@@ -17,6 +17,9 @@ function printKata (kataNumber, object) {
     const stringifiedObject = JSON.stringify(object)
     detailsElement.append(stringifiedObject)
 }
+// Append the katas to this element:
+const main = document.querySelector('main')
+
 console.log(users)
 const greenEyes1 = users.filter(user => user.eyeColor === "green")
 // OR...
@@ -26,32 +29,32 @@ const greenEyes2 = users.filter(function (user) {
 printKata(0, greenEyes1)   // If you don't have this function already, see the "Set up" section above.
 
 
+
 // KATA 1
-console.log(filter)
+console.log()
 const active = users.filter(user => user.isActive = "true")
 
 printKata(1, active)
 
  // KATA 2
-console.log(map)
+console.log()
 const emails = users.map(user => user.email)
 
 printKata(2, emails)
 
-// KATA 3
-console.log(some)
+ // KATA 3
+ console.log()
 const ovation = users.some(user => user.company = "OVATION")
 
 printKata(3, ovation)
 
 // KATA 4
-console.log(find)
+console.log()
 const over38 = users.find(user => user.age > 38)
 
 printKata(4, over38)
 
- // Kata 5
-console.log()
+// Kata 5
 const over38Active = users
     .filter(user => user.isActive = "true")
     .find(user => user.age > 38)
@@ -59,7 +62,6 @@ const over38Active = users
 printKata(5, over38Active)
 
 // KATA 6
-console.log()
 const zencoBalance = users
     .filter(user => user.company = "ZENCO")
     .map(user => user.balance)
@@ -67,7 +69,6 @@ const zencoBalance = users
 printKata(6, zencoBalance)
 
 // KATA 7
-console.log()
 const fugiatTag = users
     .filter(user => user.tags.includes("fugiat"))
     .map(user => user.age)
